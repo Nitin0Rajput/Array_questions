@@ -1,0 +1,13 @@
+int Solution::maxSubArray(const vector<int> &A) {
+    int n=A.size();
+    int max_contiguous_sum=A[0];
+    int sum=A[0];
+    
+    for(int A_number=1;A_number<n;A_number++)
+    {  
+        
+         sum=max(A[A_number],sum+A[A_number]);
+        max_contiguous_sum=max(max_contiguous_sum,sum);
+    }
+    return max_contiguous_sum;
+}
