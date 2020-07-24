@@ -1,0 +1,16 @@
+int beautifulDays(int i, int j, int k) {
+    int count=0;
+     while(i<=j){
+         int real_value=i;
+         int reverse_value=0;
+         while(real_value>0){
+             reverse_value=reverse_value*10+real_value%10;
+             real_value=real_value/10;
+         }
+         int check=abs(reverse_value-i);
+         if(check%k==0)
+         count++;
+         i++;
+     }
+     return count;
+}
