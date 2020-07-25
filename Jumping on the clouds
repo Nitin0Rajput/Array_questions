@@ -1,0 +1,12 @@
+int jumpingOnClouds(vector<int> c) {
+    int number_clouds=c.size();
+int jumps = 0;
+    for (int clouds_index = 0; clouds_index < number_clouds; clouds_index++) {
+        if (clouds_index+2 < number_clouds && !c[clouds_index+2]) {
+            jumps++;
+            clouds_index++;
+        } else if (clouds_index+1 < number_clouds && !c[clouds_index+1]) {
+            jumps++;
+        }
+    }return jumps;
+}
