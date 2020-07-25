@@ -1,0 +1,18 @@
+int equalizeArray(vector<int> arr) {
+int array_size=arr.size();
+int same_value=0;
+int total_same_value=0;
+for(int first_arr_index=0;first_arr_index<array_size;first_arr_index++){
+    same_value=0;
+    for(int second_arr_index=0;second_arr_index<array_size;second_arr_index++){
+if(arr[first_arr_index]==arr[second_arr_index]){
+    same_value++;
+}
+    }
+    if(same_value>total_same_value)
+    total_same_value=same_value;
+}
+return (array_size-total_same_value);
+
+
+}
