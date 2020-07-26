@@ -1,0 +1,9 @@
+int chocolateFeast(int n, int c, int m) {
+int wrapper_count=n/c;
+int total_wrap=wrapper_count;
+while(wrapper_count>=m){
+    total_wrap+=wrapper_count/m;
+    wrapper_count=wrapper_count/m + wrapper_count%m;
+}
+return total_wrap;
+}
