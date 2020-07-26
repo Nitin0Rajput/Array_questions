@@ -1,0 +1,10 @@
+vector<int> circularArrayRotation(vector<int> a, int k, vector<int> queries) {
+k=k%a.size();
+int a_size=a.size();
+int q_size=queries.size();
+for(int r_count=0;r_count<q_size;r_count++){
+int q_value=(queries[r_count]-k+a_size)%a_size;
+queries[r_count]=a[q_value];
+ }
+ return queries;
+}
