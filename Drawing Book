@@ -1,0 +1,21 @@
+int pageCount(int n, int p) {
+    /*
+     * Write your code here.
+     */
+int d=n-p;
+if(d<p){
+    if(n==p){
+        return 0;
+    }
+    else{
+        if(n%2==0){
+return 1+(d-1)/2;
+        }else{
+            return d/2;
+    }
+    }
+}
+else{
+    return p/2;
+}
+}
