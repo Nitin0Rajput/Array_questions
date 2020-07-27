@@ -1,0 +1,16 @@
+void bonAppetit(vector<int> bill, int k, int b) {
+int bill_size=bill.size();
+int sum=0;
+for(int count=0;count<bill_size;count++){
+    sum+=bill[count];
+}
+int e_bill=sum-bill[k];
+int pay=e_bill/2;
+if(pay==b){
+    cout<<"Bon Appetit";
+}
+else{
+    int h_pay=abs(b-pay);
+    cout<<h_pay;
+}
+}
