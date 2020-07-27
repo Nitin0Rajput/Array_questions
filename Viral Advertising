@@ -1,0 +1,12 @@
+int viralAdvertising(int n) {
+
+int liked=0;
+int total_liked=0;
+int shared=5;
+while(n--){
+    liked=shared/2;
+    total_liked+=liked;
+    shared=liked*3;
+}
+return total_liked;
+}
