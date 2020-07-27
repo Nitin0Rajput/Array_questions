@@ -1,0 +1,20 @@
+
+int getMoneySpent(vector<int> keyboards, vector<int> drives, int b) {
+    /*
+     * Write your code here.
+     */
+     int max_sum=-1;
+      
+int key_size=keyboards.size();
+int drive_size=drives.size();
+ for(int count=0;count<key_size;count++){
+    for(int s_count=0;s_count<drive_size;s_count++){
+ int sum=keyboards[count]+drives[s_count];
+ if(max_sum<sum && sum<=b)
+ max_sum=sum;
+    }
+}
+ 
+    return max_sum;
+
+}
