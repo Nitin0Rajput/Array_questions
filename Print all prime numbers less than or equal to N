@@ -1,0 +1,17 @@
+ bool prime_number(int num){
+       if(num<=1){
+         return false;
+       }
+       for(int count_prime=2;count_prime<num;count_prime++){
+         if(num % count_prime==0){
+           return false;
+         }
+       }
+       return true;
+     }
+  void show_prime(int num){
+    for(int prime_count=2;prime_count<=num;prime_count++){
+      if(prime_number(prime_count)==true)
+      cout<<prime_count<<" ";
+    }
+  }
