@@ -1,0 +1,12 @@
+bool check_prime(int num,int prime_count=2){
+  if(num<=2){
+    return (num==2)? true:false;
+  }
+  if(num % prime_count==0){
+    return false;
+  }
+  if(prime_count*prime_count>num){
+    return true;
+  }
+  return check_prime(num,prime_count+1);
+}
