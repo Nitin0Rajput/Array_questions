@@ -1,0 +1,16 @@
+void check_prime(int  num) 
+{ int p_number=0;
+   if(num<=1){
+    cout<< "Number is not prime";
+  }
+    for(int count=2;count<num/2;count++){
+       if(num % count==0){
+        p_number=count;
+       break;}
+}
+if(p_number==0){
+  cout<<"Number is prime";
+}else{
+  cout<<"number is not prime";
+}
+   }
