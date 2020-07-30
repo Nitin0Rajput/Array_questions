@@ -1,0 +1,23 @@
+vector<int> permutationEquation(vector<int> p) {
+    int n=p.size();
+    vector <int> value;
+int x=1;
+int y=0;
+while(x<=n){
+    for(int for_x=0;for_x<n;for_x++){
+        if(p[for_x]==x){
+            y=for_x+1;
+        break;
+        }
+    }
+    for(int for_y=0;for_y<n;for_y++){
+        if(p[for_y]==y){
+            y=for_y+1;
+            break;
+        }
+    }
+    value.push_back(y);
+    x++;
+}
+return value;
+}
