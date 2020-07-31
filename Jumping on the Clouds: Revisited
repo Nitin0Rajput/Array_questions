@@ -1,0 +1,18 @@
+int jumpingOnClouds(vector<int> c, int k) {
+int n=c.size();
+int check=100;
+int i=0;
+while(1){
+    if(c[i]==1){
+        check--;
+        check-=2;
+    }else{
+        check--;
+    }
+    i=(i+k)%n;
+    if(i%n==0)
+    break;
+}
+  
+return check;
+}
