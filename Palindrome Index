@@ -1,0 +1,21 @@
+int palindromeIndex(string s) {
+int size=s.length();
+    int res=0;
+    int check=-1;
+    int ops=size-1;
+    while(res<ops){
+        if(s[res]==s[ops]){
+            res++;
+            ops--;
+        }else{
+            if(s[res]==s[ops-1] && s[res+1]==s[ops-2]){
+                check=ops;
+            }else{
+                check=res;
+            }
+        break;
+        }
+    
+    }  
+ return check;
+ }
