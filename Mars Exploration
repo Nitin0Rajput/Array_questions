@@ -1,0 +1,13 @@
+int marsExploration(string s) {
+int size=s.length();
+ int w_c=0;
+for(int character=0;character<size;character+=3){
+    if(s[character]!='S')
+    w_c++;  
+    if(s[character+1]!='O')
+    w_c++;
+    if(s[character+2]!='S')
+    w_c++;
+}
+return w_c;
+}
