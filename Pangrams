@@ -1,0 +1,25 @@
+string pangrams(string s) {
+int flag=0;
+int count=0;
+vector <int> arr(26,0);
+int size=s.length();
+for(int i=0;i<size;i++){
+    int check_dp=(tolower(s[i])-'a');
+    if(check_dp<0 || check_dp>25){
+        continue;
+    }
+if(arr[check_dp]==0){
+count++;
+}
+if(count>=26){
+    flag=1;
+    break;
+}else{
+    arr[check_dp]++;
+}
+}
+if(flag)
+return "pangram";
+else
+return "not pangram";
+}
